@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📚 Appreciation for Ms. Nino</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Newsreader:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Newsreader', 'serif'],
+          },
+          colors: {
+            cream: { 50: '#fefdf8', 100: '#fdf9ed', 200: '#faf0d1', 300: '#f5e3a8', 400: '#e8c96a' },
+            ink: { 50: '#f7f5f0', 100: '#eae5d8', 200: '#d4cbb5', 300: '#b5a882', 400: '#8a7a55' },
+            blush: { 50: '#fff1f2', 100: '#ffe4e6', 200: '#fecdd3', 300: '#fda4af', 400: '#fb7185', 500: '#f43f5e' },
+            sage: { 50: '#f6f7f4', 100: '#e8ebe2', 200: '#d2d8c5', 300: '#b3be9f', 400: '#93a47a' },
+            plum: { 50: '#faf5ff', 100: '#f3e8ff', 200: '#e9d5ff', 300: '#d8b4fe', 400: '#c084fc' },
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #0c0a08; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+
+    @keyframes floatUp {
+      0% { transform: translateY(0) rotate(0deg) scale(1); opacity: 1; }
+      50% { opacity: 1; }
+      100% { transform: translateY(-120vh) rotate(360deg) scale(0.5); opacity: 0; }
+    }
+    @keyframes floatBob {
+      0%, 100% { transform: translateY(0) rotate(var(--rot)); }
+      50% { transform: translateY(-15px) rotate(calc(var(--rot) + 5deg)); }
+    }
+    @keyframes floatBob2 {
+      0%, 100% { transform: translateY(0) rotate(var(--rot)) scale(1); }
+      50% { transform: translateY(-20px) rotate(calc(var(--rot) - 3deg)) scale(1.05); }
+    }
+    @keyframes wiggle {
+      0%, 100% { transform: rotate(-3deg); }
+      50% { transform: rotate(3deg); }
+    }
+    @keyframes pulse-heart {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.15); }
+    }
+    @keyframes sparkle {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.8); }
+    }
+    @keyframes typewriter {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+    @keyframes blink-caret {
+      from, to { border-color: transparent; }
+      50% { border-color: #e8c96a; }
+    }
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes confetti-fall {
+      0% { transform: translateY(-10px) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+    }
+    @keyframes page-turn {
+      0% { transform: perspective(800px) rotateY(0deg); }
+      50% { transform: perspective(800px) rotateY(-15deg); }
+      100% { transform: perspective(800px) rotateY(0deg); }
+    }
+    @keyframes ink-spread {
+      0% { box-shadow: 0 0 0 0 rgba(232, 201, 106, 0.4); }
+      70% { box-shadow: 0 0 0 15px rgba(232, 201, 106, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(232, 201, 106, 0); }
+    }
+    @keyframes gentle-glow {
+      0%, 100% { box-shadow: 0 0 20px rgba(232, 201, 106, 0.2); }
+      50% { box-shadow: 0 0 40px rgba(232, 201, 106, 0.4), 0 0 60px rgba(232, 201, 106, 0.1); }
+    }
+    @keyframes gradient-shift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    @keyframes quill-write {
+      0%, 100% { transform: rotate(-5deg) translateY(0); }
+      25% { transform: rotate(-2deg) translateY(-3px); }
+      50% { transform: rotate(-5deg) translateY(0); }
+      75% { transform: rotate(-8deg) translateY(-3px); }
+    }
+    @keyframes book-float {
+      0%, 100% { transform: translateY(0) rotate(-2deg); }
+      50% { transform: translateY(-10px) rotate(2deg); }
+    }
+    @keyframes rainbow-border {
+      0% { border-color: #e8c96a; }
+      25% { border-color: #d8b4fe; }
+      50% { border-color: #b3be9f; }
+      75% { border-color: #fda4af; }
+      100% { border-color: #e8c96a; }
+    }
+
+    .sticker {
+      position: absolute;
+      font-size: 2rem;
+      pointer-events: none;
+      z-index: 10;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
+    }
+    .sticker-bob { animation: floatBob 4s ease-in-out infinite; }
+    .sticker-bob2 { animation: floatBob2 5s ease-in-out infinite; }
+    .sticker-wiggle { animation: wiggle 2s ease-in-out infinite; }
+    .sticker-pulse { animation: pulse-heart 1.5s ease-in-out infinite; }
+    .sticker-sparkle { animation: sparkle 2s ease-in-out infinite; }
+    .sticker-quill { animation: quill-write 2s ease-in-out infinite; }
+    .sticker-book { animation: book-float 3.5s ease-in-out infinite; }
+
+    .floating-sticker {
+      position: fixed;
+      font-size: 1.5rem;
+      pointer-events: none;
+      z-index: 50;
+      animation: floatUp linear forwards;
+    }
+
+    .appreciation-card {
+      animation: slideUp 0.8s ease-out forwards, gentle-glow 4s ease-in-out infinite;
+      opacity: 0;
+    }
+    .appreciation-card:nth-child(1) { animation-delay: 0.1s; }
+    .appreciation-card:nth-child(2) { animation-delay: 0.3s; }
+    .appreciation-card:nth-child(3) { animation-delay: 0.5s; }
+    .appreciation-card:nth-child(4) { animation-delay: 0.7s; }
+    .appreciation-card:nth-child(5) { animation-delay: 0.9s; }
+    .appreciation-card:nth-child(6) { animation-delay: 1.1s; }
+
+    .rainbow-border {
+      animation: rainbow-border 5s linear infinite;
+      border-width: 2px;
+      border-style: solid;
+    }
+
+    .hero-title {
+      background: linear-gradient(135deg, #e8c96a, #d8b4fe, #b3be9f, #fda4af, #e8c96a);
+      background-size: 300% 300%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: gradient-shift 6s ease infinite;
+    }
+
+    .lined-bg {
+      background-image: 
+        linear-gradient(rgba(232, 201, 106, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(232, 201, 106, 0.02) 1px, transparent 1px);
+      background-size: 32px 32px;
+    }
+
+    .page-texture {
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e8c96a' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    .confetti {
+      position: fixed;
+      pointer-events: none;
+      z-index: 100;
+      animation: confetti-fall linear forwards;
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: linear-gradient(135deg, #e8c96a, #d8b4fe);
+      color: #1a0a0a;
+      padding: 14px 28px;
+      border-radius: 50px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      z-index: 200;
+      transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+      box-shadow: 0 10px 30px rgba(232, 201, 106, 0.4);
+    }
+    .toast.show { transform: translateX(-50%) translateY(0); }
+
+    .sticker-clickable {
+      cursor: pointer;
+      pointer-events: all;
+      transition: transform 0.2s, background 0.2s;
+      user-select: none;
+    }
+    .sticker-clickable:hover {
+      transform: scale(1.2) !important;
+      background: rgba(232, 201, 106, 0.1) !important;
+    }
+    .sticker-clickable:active {
+      transform: scale(0.9) !important;
+    }
+
+    .cute-btn {
+      transition: all 0.3s ease;
+    }
+    .cute-btn:hover {
+      transform: scale(1.05) rotate(-1deg);
+    }
+    .cute-btn:active {
+      transform: scale(0.95);
+    }
+
+    .book-spine {
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+    }
+
+    .quote-mark {
+      font-family: 'Newsreader', serif;
+      font-size: 6rem;
+      line-height: 1;
+      opacity: 0.15;
+    }
+
+    /* Decorative book stack */
+    .book-stack-item {
+      transition: transform 0.3s ease;
+    }
+    .book-stack-item:hover {
+      transform: translateX(8px) rotate(1deg) !important;
+    }
+
+    .typewriter-text {
+      font-family: 'Newsreader', monospace;
+      overflow: hidden;
+      border-right: 2px solid #e8c96a;
+      white-space: nowrap;
+      animation: typewriter 3s steps(40) 1s forwards, blink-caret 0.75s step-end infinite;
+      width: 0;
+      display: inline-block;
+    }
+
+    .vintage-tag {
+      position: relative;
+    }
+    .vintage-tag::before {
+      content: '';
+      position: absolute;
+      top: -6px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #e8c96a;
+      box-shadow: 0 0 0 2px #0c0a08;
+    }
+  </style>
+</head>
+<body class="lined-bg min-h-screen text-white">
+
+  <!-- Floating Stickers Container -->
+  <div id="floating-container" class="fixed inset-0 pointer-events-none z-50 overflow-hidden"></div>
+
+  <!-- Toast -->
+  <div id="toast" class="toast">📚 Sent with love to Ms. Nino!</div>
+
+  <!-- Navigation -->
+  <nav class="fixed top-4 left-1/2 -translate-x-1/2 z-40 px-6 py-3 rounded-full flex items-center gap-6" 
+       style="background: rgba(18, 15, 12, 0.85); backdrop-filter: blur(12px); border: 1px solid rgba(232, 201, 106, 0.1);">
+    <span class="text-lg">📖</span>
+    <a href="#home" class="text-sm font-medium text-cream-300/80 hover:text-cream-200 transition-colors">Home</a>
+    <a href="#why" class="text-sm font-medium text-cream-300/80 hover:text-cream-200 transition-colors">Why You Rock</a>
+    <a href="#gallery" class="text-sm font-medium text-cream-300/80 hover:text-cream-200 transition-colors">Stickers</a>
+    <a href="#books" class="text-sm font-medium text-cream-300/80 hover:text-cream-200 transition-colors">Bookshelf</a>
+    <a href="#message" class="text-sm font-medium text-cream-300/80 hover:text-cream-200 transition-colors">Letter</a>
+    <span class="text-lg">✒️</span>
+  </nav>
+
+  <!-- ====== HERO SECTION ====== -->
+  <section id="home" class="min-h-screen flex flex-col items-center justify-center relative px-6 pt-20 page-texture">
+    <!-- Decorative Stickers -->
+    <div class="sticker sticker-book" style="top: 12%; left: 6%; animation-delay: 0s;">📚</div>
+    <div class="sticker sticker-bob2" style="--rot: 8deg; top: 18%; right: 8%; animation-delay: 0.5s;">✒️</div>
+    <div class="sticker sticker-pulse" style="top: 32%; left: 4%; animation-delay: 0.3s;">💕</div>
+    <div class="sticker sticker-wiggle" style="top: 10%; right: 22%; animation-delay: 1s;">🦋</div>
+    <div class="sticker sticker-sparkle" style="bottom: 28%; left: 10%; animation-delay: 0.7s;">✨</div>
+    <div class="sticker sticker-bob" style="--rot: -5deg; bottom: 22%; right: 6%; animation-delay: 1.2s;">🌻</div>
+    <div class="sticker sticker-quill" style="bottom: 35%; left: 28%; animation-delay: 0.4s;">🖊️</div>
+    <div class="sticker sticker-bob2" style="--rot: 12deg; top: 45%; right: 4%; animation-delay: 0.8s;">📖</div>
+    <div class="sticker sticker-sparkle" style="top: 6%; left: 28%; animation-delay: 1.5s;">⭐</div>
+    <div class="sticker sticker-book" style="bottom: 12%; right: 22%; animation-delay: 0.9s;">📕</div>
+    <div class="sticker sticker-wiggle" style="top: 55%; left: 2%; animation-delay: 0.6s;">🌸</div>
+    <div class="sticker sticker-pulse" style="bottom: 40%; right: 15%; animation-delay: 1.1s;">💗</div>
+
+    <div class="text-center max-w-3xl relative z-20">
+      <div class="mb-6 flex items-center justify-center gap-3">
+        <span class="text-5xl sticker-quill inline-block">✒️</span>
+        <span class="text-4xl sticker-book inline-block">📖</span>
+        <span class="text-5xl sticker-wiggle inline-block">💌</span>
+      </div>
+      <p class="text-sm uppercase tracking-[0.3em] text-cream-400 mb-4 font-medium">A literary tribute to an extraordinary teacher</p>
+      <h1 class="font-serif italic text-5xl md:text-7xl lg:text-8xl font-light leading-[1.05] tracking-tight mb-6 hero-title">
+        Thank You,<br>Ms. Nino
+      </h1>
+      <p class="text-lg md:text-xl text-cream-300/70 font-light leading-relaxed max-w-xl mx-auto mb-4">
+        You taught us more than grammar and vocabulary — you taught us the power of words, the beauty of stories, and the courage to find our own voice.
+      </p>
+      <p class="font-serif italic text-cream-400/60 text-base mb-10">
+        "One word after another, you changed our world." 📝
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <button onclick="launchConfetti()" class="cute-btn inline-flex items-center gap-2 bg-gradient-to-r from-cream-400 to-cream-300 text-stone-900 px-8 py-4 rounded-full font-medium text-sm shadow-lg">
+          <span>🎉</span> Celebrate Ms. Nino!
+        </button>
+        <button onclick="addHearts()" class="cute-btn inline-flex items-center gap-2 bg-gradient-to-r from-plum-400 to-plum-300 text-stone-900 px-8 py-4 rounded-full font-medium text-sm shadow-lg">
+          <span>💕</span> Send Love
+        </button>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-cream-400/50">
+      <span class="text-xs tracking-wider uppercase">Turn the page</span>
+      <div class="w-px h-8 bg-gradient-to-b from-cream-400/50 to-transparent"></div>
+      <span class="text-sm">📖</span>
+    </div>
+  </section>
+
+  <!-- ====== WHY YOU ROCK SECTION ====== -->
+  <section id="why" class="py-32 px-6 relative">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-20">
+        <span class="text-4xl sticker-wiggle inline-block mb-4">🌟</span>
+        <h2 class="font-serif italic text-4xl md:text-5xl font-light tracking-tight text-cream-200 mb-4">
+          Why You're the Best English Teacher
+        </h2>
+        <p class="text-cream-400/60 font-light max-w-lg mx-auto">
+          There are a thousand reasons — here are a few written from the heart.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="appreciation-card rainbow-border rounded-3xl p-8 bg-gradient-to-br from-stone-900/80 to-stone-950/80 backdrop-blur-md relative hover:translate-y-[-4px] transition-all duration-300">
+          <span class="text-4xl sticker-wiggle inline-block mb-4">📝</span>
+          <h3 class="text-xl font-medium text-cream-200 mb-3">Your Way with Words</h3>
+          <p class="text-cream-300/50 font-light leading-relaxed text-sm">You don't just teach English — you bring it to life. Every lesson feels like a story waiting to be told, and you tell it beautifully.</p>
+          <div class="absolute top-4 right-4 text-cream-400/10 text-7xl font-serif italic">W</div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="appreciation-card rainbow-border rounded-3xl p-8 bg-gradient-to-br from-stone-900/80 to-stone-950/80 backdrop-blur-md relative hover:translate-y-[-4px] transition-all duration-300">
+          <span class="text-4xl sticker-pulse inline-block mb-4">📖</span>
+          <h3 class="text-xl font-medium text-cream-200 mb-3">Opening Worlds</h3>
+          <p class="text-cream-300/50 font-light leading-relaxed text-sm">Through the books you chose and the stories you shared, you opened doors to worlds we never knew existed. Every page was an adventure.</p>
+          <div class="absolute top-4 right-4 text-plum-300/10 text-7xl font-serif italic">O</div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="appreciation-card rainbow-border rounded-3xl p-8 bg-gradient-to-br from-stone-900/80 to-stone-950/80 backdrop-blur-md relative hover:translate-y-[-4px] transition-all duration-300">
+          <span class="text-4xl sticker-bob inline-block mb-4" style="--rot: 0deg;">✍️</span>
+          <h3 class="text-xl font-medium text-cream-200 mb-3">Believing in Our Voice</h3>
+          <p class="text-cream-300/50 font-light leading-relaxed text-sm">You never just corrected our writing — you encouraged our voice. You made us believe that our words matter and our stories deserve to be told.</p>
+          <div class="absolute top-4 right-4 text-sage-300/10 text-7xl font-serif italic">B</div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="appreciation-card rainbow-border rounded-3xl p-8 bg-gradient-to-br from-stone-900/80 to-stone-950/80 backdrop-blur-md relative hover:translate-y-[-4px] transition-all duration-300">
+          <span class="text-4xl sticker-sparkle inline-block mb-4">🎭</span>
+          <h3 class="text-xl font-medium text-cream-200 mb-3">Making Literature Fun</h3>
+          <p class="text-cream-300/50 font-light leading-relaxed text-sm">Who knew Shakespeare could be this exciting? Your passion and creativity turned even the oldest texts into something we actually looked forward to.</p>
+          <div class="absolute top-4 right-4 text-blush-300/10 text-7xl font-serif italic">M</div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="appreciation-card rainbow-border rounded-3xl p-8 bg-gradient-to-br from-stone-900/80 to-stone-950/80 backdrop-blur-md relative hover:translate-y-[-4px] transition-all duration-300">
+          <span class="text-4xl sticker-wiggle inline-block mb-4">🤗</span>
+          <h3 class="text-xl font-medium text-cream-200 mb-3">Your Endless Patience</h3>
+          <p class="text-cream-300/50 font-light leading-relaxed text-sm">Whether it was explaining a tricky grammar rule for the fifth time or helping us find the right words — your patience never ran out.</p>
+          <div class="absolute top-4 right-4 text-cream-400/10 text-7xl font-serif italic">P</div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="appreciation-card rainbow-border rounded-3xl p-8 bg-gradient-to-br from-stone-900/80 to-stone-950/80 backdrop-blur-md relative hover:translate-y-[-4px] transition-all duration-300">
+          <span class="text-4xl sticker-book inline-block mb-4">💡</span>
+          <h3 class="text-xl font-medium text-cream-200 mb-3">Inspiring Thinkers</h3>
+          <p class="text-cream-300/50 font-light leading-relaxed text-sm">You taught us not just what to think, but how to think. Your questions challenged us, and your guidance helped us grow into deeper thinkers.</p>
+          <div class="absolute top-4 right-4 text-plum-300/10 text-7xl font-serif italic">I</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== LITERARY QUOTE BANNER ====== -->
+  <section class="py-24 px-6 relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-r from-cream-400/5 via-plum-400/5 to-sage-400/5"></div>
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+      <span class="quote-mark text-cream-400/30 select-none">"</span>
+      <blockquote class="font-serif italic text-3xl md:text-5xl font-light leading-[1.15] tracking-tight text-cream-200 mb-6 -mt-10">
+        A word after a word after a word is power.
+      </blockquote>
+      <p class="text-cream-400/50 font-light text-sm">— Margaret Atwood</p>
+      <p class="text-cream-400/30 font-serif italic mt-3">And Ms. Nino, you gave us that power ✨</p>
+    </div>
+  </section>
+
+  <!-- ====== STICKER GALLERY ====== -->
+  <section id="gallery" class="py-32 px-6 relative">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-20">
+        <span class="text-4xl sticker-sparkle inline-block mb-4">🎨</span>
+        <h2 class="font-serif italic text-4xl md:text-5xl font-light tracking-tight text-cream-200 mb-4">
+          Sticker Collection
+        </h2>
+        <p class="text-cream-400/60 font-light max-w-lg mx-auto">
+          Click any sticker to launch it with love! A little collection of joy for our favorite English teacher 📚
+        </p>
+      </div>
+
+      <div class="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-4">
+        <div class="sticker-clickable text-5xl p-4 rounded-2xl bg-stone-900/50 border border-cream-400/5 flex items-center justify-center" onclick="popSticker(this, '📚')">📚</div>
+        <div class="sticker-clickable text-5xl p-4 rounded-2xl bg-stone-900/50 border border-cream-400/5 flex items-center justify-center" onclick="popSticker(this, '✒️')">✒️</div>
+        <div class="sticker-clickable text-5xl p-4 rounded-2xl bg-stone-900/50 border border-cream-400/5 flex items-center justify-center" onclick="popSticker(this, '📖')">📖</div>
+        <div class="sticker-clickable text-5xl p-4 rounded-2xl bg-stone-900/50 border border-cream-400/5 flex items-center justify-center" onclick="popSticker(this, '🖊️')">🖊️</div>
+        <div class="sticker-clickable text-5xl p-4 rounded-2xl bg-stone-900/50 border border-cream-400/5 flex items-center justify-center" onclick="popSticker(this, '📝')">📝</div>
+        <div class="sticker-clickable text-5xl p-4 rounded-2xl bg-stone-900/50 border border-cream-400/5 flex items-center justify-center" onclick="popSticker(this, '💕')">💕</div>
+        <div class="sticker-clickable text-5xl p-4 rounded-2xl bg-stone-900/50 border border-cream-400/5 flex items-center justify-center" onclick="popSticker(this, '🦋')">🦋</div>
+        <div class="sticker-clickable text-5xl p-4 rounded-2xl bg-stone-900/50 border border-cream-400/5 flex items-center justify-center" onclick="popSticker(this, '🌸')">🌸</div>
+        <div class="sticker-clickable text-5xl p-4 rounded-2xl bg-stone-900/50 border border-cream-400/5 flex items-center justify-center" onclick="popSticker(this, '🎓')">🎓</div>
+        <div class="sticker-clickable text-5xl p-4 rounded-2xl bg-stone-900/50 border border-cream-400/5 flex items-center justify-center" onclick="popSticker(this, '📕')">📕</div>
+        <div class="sticker-clickable text-5xl p-4 rounded-2xl bg-stone-900/50 border border-cream-400/5 flex items-center justify-center" onclick="popSticker(this, '🌻')">🌻</div>
+        <div class="sticker-clickable text-5xl p-4 rounded-2xl bg-stone-900/50 border border-cream-400/5 flex items-center justify-center" onclick="popSticker(this, '🎭')">🎭</div>
+        <div class="sticker-clickable text-5xl p-4 rounded-2xl bg-stone-900/50 border border-cream-400/5 flex items-center justify-center" onclick="popSticker(this, '💫')">💫</div>
+        <div class="sticker-clickable text-5xl p-4 rounded-2xl bg-stone-900/50 border border-cream-400/5 flex items-center justify-center" onclick="popSticker(this, '✨')">✨</div>
+        <div class="sticker-clickable text-5xl p-4 rounded-2xl bg-stone-900/50 border border-cream-400/5 flex items-center justify-center" onclick="popSticker(this, '🧁')">🧁</div>
+        <div class="sticker-clickable text-5xl p-4 rounded-2xl bg-stone-900/50 border border-cream-400/5 flex items-center justify-center" onclick="popSticker(this, '🎀')">🎀</div>
+        <div class="sticker-clickable text-5xl p-4 rounded-2xl bg-stone-900/50 border border-cream-400/5 flex items-center justify-center" onclick="popSticker(this, '💝')">💝</div>
+        <div class="sticker-clickable text-5xl p-4 rounded-2xl bg-stone-900/50 border border-cream-400/5 flex items-center justify-center" onclick="popSticker(this, '🌷')">🌷</div>
+        <div class="sticker-clickable text-5xl p-4 rounded-2xl bg-stone-900/50 border border-cream-400/5 flex items-center justify-center" onclick="popSticker(this, '🍀')">🍀</div>
+        <div class="sticker-clickable text-5xl p-4 rounded-2xl bg-stone-900/50 border border-cream-400/5 flex items-center justify-center" onclick="popSticker(this, '🫧')">🫧</div>
+        <div class="sticker-clickable text-5xl p-4 rounded-2xl bg-stone-900/50 border border-cream-400/5 flex items-center justify-center" onclick="popSticker(this, '🌙')">🌙</div>
+        <div class="sticker-clickable text-5xl p-4 rounded-2xl bg-stone-900/50 border border-cream-400/5 flex items-center justify-center" onclick="popSticker(this, '🗞️')">🗞️</div>
+        <div class="sticker-clickable text-5xl p-4 rounded-2xl bg-stone-900/50 border border-cream-400/5 flex items-center justify-center" onclick="popSticker(this, '💌')">💌</div>
+        <div class="sticker-clickable text-5xl p-4 rounded-2xl bg-stone-900/50 border border-cream-400/5 flex items-center justify-center" onclick="popSticker(this, '🌟')">🌟</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== VIRTUAL BOOKSHELF ====== -->
+  <section id="books" class="py-32 px-6 relative">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-20">
+        <span class="text-4xl sticker-book inline-block mb-4">📚</span>
+        <h2 class="font-serif italic text-4xl md:text-5xl font-light tracking-tight text-cream-200 mb-4">
+          Ms. Nino's Bookshelf
+        </h2>
+        <p class="text-cream-400/60 font-light max-w-lg mx-auto">
+          The stories and lessons that stayed with us long after the bell rang.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Book 1 -->
+        <div class="book-stack-item flex gap-5 p-6 rounded-2xl bg-stone-900/40 border border-cream-400/5 cursor-pointer hover:border-cream-400/20 transition-all" style="transform: rotate(-0.5deg);">
+          <div class="flex-shrink-0 w-16 rounded-lg bg-gradient-to-b from-rose-800 to-rose-950 flex items-center justify-center p-2 shadow-lg" style="box-shadow: -3px 0 8px rgba(0,0,0,0.3);">
+            <span class="book-spine text-cream-200 text-[10px] font-serif italic tracking-wider text-center leading-tight">To Kill a Mockingbird</span>
+          </div>
+          <div>
+            <h4 class="font-serif italic text-cream-200 text-lg mb-1">To Kill a Mockingbird</h4>
+            <p class="text-cream-400/40 text-xs mb-2">Harper Lee</p>
+            <p class="text-cream-300/50 text-sm font-light leading-relaxed">You taught us that courage isn't a man with a gun — it's standing up for what's right even when you know you'll lose.</p>
+            <span class="text-xs text-cream-400/30 mt-2 inline-block">📖 "You never really understand a person…"</span>
+          </div>
+        </div>
+
+        <!-- Book 2 -->
+        <div class="book-stack-item flex gap-5 p-6 rounded-2xl bg-stone-900/40 border border-cream-400/5 cursor-pointer hover:border-cream-400/20 transition-all" style="transform: rotate(0.5deg);">
+          <div class="flex-shrink-0 w-16 rounded-lg bg-gradient-to-b from-indigo-800 to-indigo-950 flex items-center justify-center p-2 shadow-lg" style="box-shadow: -3px 0 8px rgba(0,0,0,0.3);">
+            <span class="book-spine text-cream-200 text-[10px] font-serif italic tracking-wider text-center leading-tight">Romeo & Juliet</span>
+          </div>
+          <div>
+            <h4 class="font-serif italic text-cream-200 text-lg mb-1">Romeo & Juliet</h4>
+            <p class="text-cream-400/40 text-xs mb-2">William Shakespeare</p>
+            <p class="text-cream-300/50 text-sm font-light leading-relaxed">You made iambic pentameter feel like music, and showed us why Shakespeare still matters hundreds of years later.</p>
+            <span class="text-xs text-cream-400/30 mt-2 inline-block">🎭 "What's in a name?"</span>
+          </div>
+        </div>
+
+        <!-- Book 3 -->
+        <div class="book-stack-item flex gap-5 p-6 rounded-2xl bg-stone-900/40 border border-cream-400/5 cursor-pointer hover:border-cream-400/20 transition-all" style="transform: rotate(-0.3deg);">
+          <div class="flex-shrink-0 w-16 rounded-lg bg-gradient-to-b from-emerald-800 to-emerald-950 flex items-center justify-center p-2 shadow-lg" style="box-shadow: -3px 0 8px rgba(0,0,0,0.3);">
+            <span class="book-spine text-cream-200 text-[10px] font-serif italic tracking-wider text-center leading-tight">The Great Gatsby</span>
+          </div>
+          <div>
+            <h4 class="font-serif italic text-cream-200 text-lg mb-1">The Great Gatsby</h4>
+            <p class="text-cream-400/40 text-xs mb-2">F. Scott Fitzgerald</p>
+            <p class="text-cream-300/50 text-sm font-light leading-relaxed">Through Gatsby's dream, you taught us to see the green light in our own lives — and to chase it with our words.</p>
+            <span class="text-xs text-cream-400/30 mt-2 inline-block">🟢 "So we beat on, boats against the current…"</span>
+          </div>
+        </div>
+
+        <!-- Book 4 -->
+        <div class="book-stack-item flex gap-5 p-6 rounded-2xl bg-stone-900/40 border border-cream-400/5 cursor-pointer hover:border-cream-400/20 transition-all" style="transform: rotate(0.3deg);">
+          <div class="flex-shrink-0 w-16 rounded-lg bg-gradient-to-b from-amber-800 to-amber-950 flex items-center justify-center p-2 shadow-lg" style="box-shadow: -3px 0 8px rgba(0,0,0,0.3);">
+            <span class="book-spine text-cream-200 text-[10px] font-serif italic tracking-wider text-center leading-tight">Animal Farm</span>
+          </div>
+          <div>
+            <h4 class="font-serif italic text-cream-200 text-lg mb-1">Animal Farm</h4>
+            <p class="text-cream-400/40 text-xs mb-2">George Orwell</p>
+            <p class="text-cream-300/50 text-sm font-light leading-relaxed">You showed us that language is power — and that those who control the words control the narrative. We'll never forget that.</p>
+            <span class="text-xs text-cream-400/30 mt-2 inline-block">🐷 "All animals are equal…"</span>
+          </div>
+        </div>
+
+        <!-- Book 5 -->
+        <div class="book-stack-item flex gap-5 p-6 rounded-2xl bg-stone-900/40 border border-cream-400/5 cursor-pointer hover:border-cream-400/20 transition-all" style="transform: rotate(-0.4deg);">
+          <div class="flex-shrink-0 w-16 rounded-lg bg-gradient-to-b from-purple-800 to-purple-950 flex items-center justify-center p-2 shadow-lg" style="box-shadow: -3px 0 8px rgba(0,0,0,0.3);">
+            <span class="book-spine text-cream-200 text-[10px] font-serif italic tracking-wider text-center leading-tight">Lord of the Flies</span>
+          </div>
+          <div>
+            <h4 class="font-serif italic text-cream-200 text-lg mb-1">Lord of the Flies</h4>
+            <p class="text-cream-400/40 text-xs mb-2">William Golding</p>
+            <p class="text-cream-300/50 text-sm font-light leading-relaxed">Your discussions on human nature and society made us question everything — and that's exactly what great teaching does.</p>
+            <span class="text-xs text-cream-400/30 mt-2 inline-block">🔥 "Maybe there is a beast…"</span>
+          </div>
+        </div>
+
+        <!-- Book 6 -->
+        <div class="book-stack-item flex gap-5 p-6 rounded-2xl bg-stone-900/40 border border-cream-400/5 cursor-pointer hover:border-cream-400/20 transition-all" style="transform: rotate(0.4deg);">
+          <div class="flex-shrink-0 w-16 rounded-lg bg-gradient-to-b from-cyan-800 to-cyan-950 flex items-center justify-center p-2 shadow-lg" style="box-shadow: -3px 0 8px rgba(0,0,0,0.3);">
+            <span class="book-spine text-cream-200 text-[10px] font-serif italic tracking-wider text-center leading-tight">Poetry Anthology</span>
+          </div>
+          <div>
+            <h4 class="font-serif italic text-cream-200 text-lg mb-1">Poetry Anthology</h4>
+            <p class="text-cream-400/40 text-xs mb-2">Various Poets</p>
+            <p class="text-cream-300/50 text-sm font-light leading-relaxed">From Donne to Duffy, you showed us that poetry isn't just words on a page — it's emotion captured in rhythm and rhyme.</p>
+            <span class="text-xs text-cream-400/30 mt-2 inline-block">🌹 "I wandered lonely as a cloud…"</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== WORD CLOUD / THINGS WE'LL REMEMBER ====== -->
+  <section class="py-24 px-6 relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-cream-400/3 to-transparent"></div>
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+      <h2 class="font-serif italic text-3xl md:text-4xl font-light text-cream-200 mb-12">
+        Things We'll Always Remember ✨
+      </h2>
+      <div class="flex flex-wrap justify-center gap-3">
+        <span class="px-5 py-2.5 rounded-full bg-cream-400/10 border border-cream-400/10 text-cream-200 text-sm font-light">"Read between the lines"</span>
+        <span class="px-5 py-2.5 rounded-full bg-plum-400/10 border border-plum-400/10 text-plum-200 text-sm font-light">"Show, don't tell"</span>
+        <span class="px-5 py-2.5 rounded-full bg-sage-400/10 border border-sage-400/10 text-sage-200 text-sm font-light">"Context is everything"</span>
+        <span class="px-5 py-2.5 rounded-full bg-blush-400/10 border border-blush-400/10 text-blush-200 text-sm font-light">"Every word has weight"</span>
+        <span class="px-5 py-2.5 rounded-full bg-cream-400/10 border border-cream-400/10 text-cream-200 text-sm font-medium">PEEL paragraphs 😄</span>
+        <span class="px-5 py-2.5 rounded-full bg-plum-400/10 border border-plum-400/10 text-plum-200 text-sm font-light">"Analyse the language"</span>
+        <span class="px-5 py-2.5 rounded-full bg-sage-400/10 border border-sage-400/10 text-sage-200 text-sm font-light">The way you read aloud 🎵</span>
+        <span class="px-5 py-2.5 rounded-full bg-blush-400/10 border border-blush-400/10 text-blush-200 text-sm font-light">"Support with evidence"</span>
+        <span class="px-5 py-2.5 rounded-full bg-cream-400/10 border border-cream-400/10 text-cream-200 text-sm font-light">Your encouraging smile 🌸</span>
+        <span class="px-5 py-2.5 rounded-full bg-plum-400/10 border border-plum-400/10 text-plum-200 text-sm font-light">"Thesis statement!"</span>
+        <span class="px-5 py-2.5 rounded-full bg-sage-400/10 border border-sage-400/10 text-sage-200 text-sm font-light">"Consider the audience"</span>
+        <span class="px-5 py-2.5 rounded-full bg-blush-400/10 border border-blush-400/10 text-blush-200 text-sm font-light">Essay tips we'll never forget 📝</span>
+        <span class="px-5 py-2.5 rounded-full bg-cream-400/10 border border-cream-400/10 text-cream-200 text-sm font-light">"What is the writer implying?"</span>
+        <span class="px-5 py-2.5 rounded-full bg-plum-400/10 border border-plum-400/10 text-plum-200 text-sm font-light">Dramatic readings 🎭</span>
+        <span class="px-5 py-2.5 rounded-full bg-sage-400/10 border border-sage-400/10 text-sage-200 text-sm font-light">"Check your spelling!" ✅</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== PHOTO MEMORIES ====== -->
+  <section class="py-32 px-6 relative">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-20">
+        <span class="text-4xl sticker-pulse inline-block mb-4">📸</span>
+        <h2 class="font-serif italic text-4xl md:text-5xl font-light tracking-tight text-cream-200 mb-4">
+          Snapshots of Gratitude
+        </h2>
+        <p class="text-cream-400/60 font-light max-w-lg mx-auto">
+          Every lesson with you was a moment worth remembering.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <!-- Photo 1 -->
+        <div class="relative group hover:translate-y-[-4px] transition-all duration-300">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-14 h-5 bg-cream-200/70 rounded-sm z-10" style="transform: translateX(-50%) rotate(-2deg);"></div>
+          <div class="p-4 bg-stone-900/60 rounded-2xl border border-cream-400/5 overflow-hidden">
+            <div class="aspect-[4/5] rounded-xl overflow-hidden mb-4">
+              <img src="https://picsum.photos/seed/nino-library/400/500.jpg" alt="Library" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" style="filter: sepia(0.15);">
+            </div>
+            <p class="text-cream-200/80 text-sm font-light text-center italic font-serif">"In books, we find ourselves"</p>
+            <div class="text-center mt-2">📚</div>
+          </div>
+        </div>
+
+        <!-- Photo 2 -->
+        <div class="relative group hover:translate-y-[-4px] transition-all duration-300 md:mt-8">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-14 h-5 bg-cream-200/70 rounded-sm z-10" style="transform: translateX(-50%) rotate(3deg);"></div>
+          <div class="p-4 bg-stone-900/60 rounded-2xl border border-cream-400/5 overflow-hidden">
+            <div class="aspect-[4/5] rounded-xl overflow-hidden mb-4">
+              <img src="https://picsum.photos/seed/nino-writing-desk/400/500.jpg" alt="Writing desk" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" style="filter: sepia(0.15);">
+            </div>
+            <p class="text-cream-200/80 text-sm font-light text-center italic font-serif">"Where the magic happens"</p>
+            <div class="text-center mt-2">✍️</div>
+          </div>
+        </div>
+
+        <!-- Photo 3 -->
+        <div class="relative group hover:translate-y-[-4px] transition-all duration-300">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-14 h-5 bg-cream-200/70 rounded-sm z-10" style="transform: translateX(-50%) rotate(-1deg);"></div>
+          <div class="p-4 bg-stone-900/60 rounded-2xl border border-cream-400/5 overflow-hidden">
+            <div class="aspect-[4/5] rounded-xl overflow-hidden mb-4">
+              <img src="https://picsum.photos/seed/nino-garden-reading/400/500.jpg" alt="Reading garden" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" style="filter: sepia(0.15);">
+            </div>
+            <p class="text-cream-200/80 text-sm font-light text-center italic font-serif">"Stories bloom everywhere"</p>
+            <div class="text-center mt-2">🌷</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== MESSAGE / LETTER SECTION ====== -->
+  <section id="message" class="py-32 px-6 relative">
+    <!-- Decorative stickers -->
+    <div class="sticker sticker-quill" style="top: 5%; left: 5%; animation-delay: 0.3s;">✒️</div>
+    <div class="sticker sticker-bob2" style="--rot: 10deg; top: 10%; right: 8%; animation-delay: 1s;">📖</div>
+
+    <div class="max-w-2xl mx-auto">
+      <div class="text-center mb-16">
+        <span class="text-4xl sticker-pulse inline-block mb-4">💌</span>
+        <h2 class="font-serif italic text-4xl md:text-5xl font-light tracking-tight text-cream-200 mb-4">
+          A Letter for You
+        </h2>
+        <p class="text-cream-400/60 font-light">In your own words — because you taught us the power of them.</p>
+      </div>
+
+      <!-- The Letter -->
+      <div class="relative bg-gradient-to-br from-cream-50 to-plum-50 rounded-3xl p-10 md:p-14 shadow-2xl" style="box-shadow: 0 25px 50px -12px rgba(232, 201, 106, 0.2);">
+        <!-- Red margin line like notebook paper -->
+        <div class="absolute left-16 top-8 bottom-8 w-px bg-rose-300/30 hidden md:block"></div>
+        
+        <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-cream-300 px-6 py-1.5 rounded-full text-xs font-medium text-stone-700 tracking-wider uppercase shadow-sm">
+          ✒️ Written with love
+        </div>
+        
+        <div class="text-stone-800 mb-6 md:pl-10">
+          <p class="font-serif italic text-2xl mb-2">Dear Ms. Nino,</p>
+        </div>
+
+        <div id="letter-content" class="text-stone-600 font-light leading-relaxed space-y-4 mb-8 md:pl-10" contenteditable="true" style="outline: none;">
+          <p>Thank you for being more than just an English teacher — you've been a guide, a mentor, and the person who believed in our words before we could believe in them ourselves.</p>
+          <p>You turned grammar from a set of rules into a toolkit for expression. You made Shakespeare feel relevant, poetry feel personal, and every essay feel like it mattered.</p>
+          <p>Most of all, thank you for teaching us that our voice is worth hearing. That's a lesson that goes far beyond the classroom.</p>
+          <p>With endless gratitude and a love for words you helped us find, 📝💕</p>
+        </div>
+
+        <div class="flex items-center gap-4 md:pl-10">
+          <div class="h-px flex-1 bg-stone-300/50"></div>
+          <span class="text-2xl sticker-wiggle inline-block">📚</span>
+          <div class="h-px flex-1 bg-stone-300/50"></div>
+        </div>
+
+        <div class="mt-6 text-right md:pr-4">
+          <p class="font-serif italic text-stone-700 text-lg">With love & gratitude,</p>
+          <p class="font-serif italic text-amber-700 text-xl mt-1">Your grateful students ♡</p>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-wrap gap-4 mt-10 justify-center">
+        <button onclick="sendLove()" class="cute-btn inline-flex items-center gap-2 bg-gradient-to-r from-cream-400 to-cream-300 text-stone-900 px-8 py-4 rounded-full font-medium text-sm shadow-lg">
+          <span>💌</span> Send the Letter
+        </button>
+        <button onclick="launchConfetti()" class="cute-btn inline-flex items-center gap-2 bg-gradient-to-r from-plum-400 to-plum-300 text-stone-900 px-8 py-4 rounded-full font-medium text-sm shadow-lg">
+          <span>🎉</span> Confetti!
+        </button>
+        <button onclick="addHearts()" class="cute-btn inline-flex items-center gap-2 bg-gradient-to-r from-blush-400 to-blush-300 text-stone-900 px-8 py-4 rounded-full font-medium text-sm shadow-lg">
+          <span>💕</span> Heart Shower
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SECOND QUOTE BANNER ====== -->
+  <section class="py-24 px-6 relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-r from-sage-400/5 via-cream-400/5 to-blush-400/5"></div>
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+      <span class="quote-mark text-cream-400/20 select-none">"</span>
+      <blockquote class="font-serif italic text-3xl md:text-5xl font-light leading-[1.15] tracking-tight text-cream-200 mb-6 -mt-10">
+        The influence of a great teacher extends beyond the classroom, into the stories we tell and the words we choose.
+      </blockquote>
+      <p class="text-cream-400/40 font-light text-sm">Ms. Nino, your influence is our forever punctuation mark 💛</p>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="py-16 px-6 border-t border-cream-400/5">
+    <div class="max-w-5xl mx-auto text-center">
+      <div class="flex items-center justify-center gap-2 mb-4">
+        <span class="text-3xl sticker-book inline-block">📖</span>
+        <span class="text-3xl sticker-pulse inline-block">💕</span>
+        <span class="text-3xl sticker-quill inline-block">✒️</span>
+      </div>
+      <p class="font-serif italic text-2xl text-cream-200 mb-2">Made with love for Ms. Nino</p>
+      <p class="text-cream-400/40 text-sm font-light">The best English teacher — now and always 📚✨</p>
+      <div class="flex items-center justify-center gap-3 mt-6 text-2xl">
+        <span class="sticker-sparkle inline-block" style="animation-delay: 0s;">✨</span>
+        <span class="sticker-sparkle inline-block" style="animation-delay: 0.3s;">📚</span>
+        <span class="sticker-sparkle inline-block" style="animation-delay: 0.6s;">💕</span>
+        <span class="sticker-sparkle inline-block" style="animation-delay: 0.9s;">📖</span>
+        <span class="sticker-sparkle inline-block" style="animation-delay: 1.2s;">✨</span>
+      </div>
+      <p class="text-cream-400/20 text-xs mt-8 font-light italic font-serif">"And so, being young and dipt in folly, I fell in love with melancholy." — but Ms. Nino made us love English instead 💛</p>
+    </div>
+  </footer>
+
+  <script>
+    // ===== FLOATING STICKER SPAWNER =====
+    function spawnFloatingSticker() {
+      const container = document.getElementById('floating-container');
+      const stickers = ['📚', '✒️', '📖', '💕', '📝', '🌸', '✨', '🖊️', '🎓', '🦋', '💫', '🌷', '💌', '🌟', '🧁', '💝'];
+      const sticker = document.createElement('div');
+      sticker.className = 'floating-sticker';
+      sticker.textContent = stickers[Math.floor(Math.random() * stickers.length)];
+      sticker.style.left = Math.random() * 100 + '%';
+      sticker.style.bottom = '-40px';
+      sticker.style.fontSize = (1 + Math.random() * 1.5) + 'rem';
+      sticker.style.animationDuration = (8 + Math.random() * 8) + 's';
+      sticker.style.opacity = 0.5 + Math.random() * 0.4;
+      container.appendChild(sticker);
+      setTimeout(() => sticker.remove(), 16000);
+    }
+
+    setInterval(spawnFloatingSticker, 3500);
+    setTimeout(() => { for(let i = 0; i < 5; i++) setTimeout(spawnFloatingSticker, i * 700); }, 500);
+
+    // ===== POP STICKER ON CLICK =====
+    function popSticker(el, emoji) {
+      const rect = el.getBoundingClientRect();
+      const pop = document.createElement('div');
+      pop.className = 'floating-sticker';
+      pop.textContent = emoji;
+      pop.style.left = rect.left + rect.width/2 + 'px';
+      pop.style.bottom = (window.innerHeight - rect.top) + 'px';
+      pop.style.fontSize = '2.5rem';
+      pop.style.animationDuration = '4s';
+      pop.style.zIndex = '100';
+      document.getElementById('floating-container').appendChild(pop);
+      setTimeout(() => pop.remove(), 4000);
+
+      el.style.transform = 'scale(1.3)';
+      setTimeout(() => el.style.transform = '', 200);
+    }
+
+    // ===== CONFETTI LAUNCHER =====
+    function launchConfetti() {
+      const colors = ['#e8c96a', '#d8b4fe', '#b3be9f', '#fda4af', '#7dd3fc', '#fb7185', '#fbbf24', '#34d399', '#c084fc'];
+      const shapes = ['🔤', '📝', '📖', '💕', '✨', '📚'];
+      for (let i = 0; i < 100; i++) {
+        setTimeout(() => {
+          const conf = document.createElement('div');
+          // Mix of emoji confetti and colored shapes
+          if (Math.random() > 0.6) {
+            conf.textContent = shapes[Math.floor(Math.random() * shapes.length)];
+            conf.style.fontSize = (12 + Math.random() * 10) + 'px';
+            conf.style.lineHeight = '1';
+            conf.style.width = 'auto';
+            conf.style.height = 'auto';
+          } else {
+            conf.style.background = colors[Math.floor(Math.random() * colors.length)];
+            conf.style.width = (6 + Math.random() * 8) + 'px';
+            conf.style.height = (6 + Math.random() * 8) + 'px';
+            conf.style.borderRadius = Math.random() > 0.5 ? '50%' : '2px';
+          }
+          conf.className = 'confetti';
+          conf.style.left = Math.random() * 100 + '%';
+          conf.style.top = '-10px';
+          conf.style.animationDuration = (2.5 + Math.random() * 3) + 's';
+          document.body.appendChild(conf);
+          setTimeout(() => conf.remove(), 5500);
+        }, i * 25);
+      }
+    }
+
+    // ===== HEART SHOWER =====
+    function addHearts() {
+      const hearts = ['💖', '💕', '💗', '💝', '🩷', '❤️', '💞', '📚', '📖'];
+      for (let i = 0; i < 35; i++) {
+        setTimeout(() => {
+          const heart = document.createElement('div');
+          heart.className = 'floating-sticker';
+          heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+          heart.style.left = Math.random() * 100 + '%';
+          heart.style.bottom = '-40px';
+          heart.style.fontSize = (1.5 + Math.random() * 2) + 'rem';
+          heart.style.animationDuration = (5 + Math.random() * 5) + 's';
+          document.getElementById('floating-container').appendChild(heart);
+          setTimeout(() => heart.remove(), 10000);
+        }, i * 100);
+      }
+    }
+
+    // ===== SEND LOVE TOAST =====
+    function sendLove() {
+      const toast = document.getElementById('toast');
+      const messages = [
+        '📚 Letter delivered to Ms. Nino with love!',
+        '✒️ Ms. Nino, you are extraordinary!',
+        '💕 Love letter sent successfully!',
+        '📖 Your words changed our world!',
+        '💗 Gratitude, sealed and delivered!',
+        '🌸 Ms. Nino is the best English teacher!',
+        '📝 A love letter for the teacher who taught us to write!',
+        '🎓 From your students, with all our hearts!'
+      ];
+      toast.textContent = messages[Math.floor(Math.random() * messages.length)];
+      toast.classList.add('show');
+      addHearts();
+      setTimeout(() => toast.classList.remove('show'), 3000);
+    }
+
+    // ===== SMOOTH SCROLL =====
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) target.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // ===== BOOK STACK HOVER SOUND EFFECT (visual) =====
+    document.querySelectorAll('.book-stack-item').forEach(book => {
+      book.addEventListener('click', function() {
+        const title = this.querySelector('h4').textContent;
+        const toast = document.getElementById('toast');
+        toast.textContent = `📖 "${title}" — a story we'll never forget!`;
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 2500);
+      });
+    });
+  </script>
+</body>
+</html>
